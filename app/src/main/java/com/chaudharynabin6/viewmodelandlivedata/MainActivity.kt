@@ -11,19 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val model: UserViewModel by viewModels()
-
-        model.getUserList().observe(this) { users ->
-            // update UI
-            binding.listView.adapter = UserListViewAdapter( users)
-
-        }
-        binding.loadUser.setOnClickListener{
-            model.loadUsers()
-        }
-
-
     }
 
 }

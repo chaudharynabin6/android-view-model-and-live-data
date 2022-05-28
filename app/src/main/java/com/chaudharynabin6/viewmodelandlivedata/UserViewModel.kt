@@ -36,5 +36,12 @@ class UserViewModel : ViewModel() {
         )
     }
 
+    fun loadUserFromFragment2(){
+        this@UserViewModel.users.value = listOf(
+            User(1, "nabin chaudhary"),
+            User(2, "naresh chaudhary")
+        )
+    }
+
 
 }
